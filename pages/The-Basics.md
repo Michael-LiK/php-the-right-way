@@ -355,9 +355,7 @@ $a = 3;
 return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
 {% endhighlight %}
 
-Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
-as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
-also true.
+括号的包围还将我们要检查块的语句块视为一个整体。如下面这个例子，如果两个代码块（$ a == 3和$ b == 4）都为真且$ c == 5也成立，则返回true。
 
 {% highlight php %}
 <?php
