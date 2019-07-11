@@ -289,9 +289,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 如果要连接任意类型的多个字符串，或在双引号字符串中进行插值，则结果可能会有所不同。如果您使用的是少量的值，那么进行连接速度会稍微快一点。对于大量的值，进行插值操作速度要快得多。
 
-Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
-optimization unless you really understand the meaning and impact of the differences.
+无论你使用字符串做什么，这些类型都不会对你的应用产生任何明显的影响。尝试重写代码以使用其他方式是徒劳，所以请避免过度优化，除非您真正了解差异的含义和影响。
 
 * [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
@@ -347,6 +345,8 @@ return $a == 3; // Will return true or false if $a == 3
 
 When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
 within blocks of statements. An example of when there is no requirement to use bracketing is:
+当使用三元运算符时，括号可以帮助提高代码可读性，还包括联合
+在声明的块内。不需要使用括号的示例如下：
 
 {% highlight php %}
 <?php
