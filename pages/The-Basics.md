@@ -152,7 +152,7 @@ $a = 'Multi-line example'      // concatenation operator (.)
     . 'of what to do';
 {% endhighlight %}
 
-* [String Operators](http://php.net/language.operators.string)
+* [字符串运算符](http://php.net/language.operators.string)
 
 ### 字符串类型
 
@@ -160,12 +160,9 @@ $a = 'Multi-line example'      // concatenation operator (.)
 
 #### 单引号
 
-Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
-variables.
+单引号常常被用来表示“文字字符串”，而文字字符串不会解析变量和特殊符号。
 
-If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
-exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
-errors if no variable was found.
+如果你使用单引号，你可能像这样在一个字符串中输入一个变量名: `'some $thing'`, 你将会看到这样的输出`some $thing`. 如果你使用双引号, 他将会尝试解析 `$thing`这个变量名，如果变量没有找到将会报错.
 
 
 {% highlight php %}
@@ -179,12 +176,11 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  */
 {% endhighlight %}
 
-* [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
+* [单引号](http://php.net/language.types.string#language.types.string.syntax.single)
 
 #### 双引号
 
-Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
-of special characters, like `\n` for newline, `\t` for a tab, etc.
+双引号好比处理字符串的瑞士军刀，他不仅仅是像前文提到的能处理变量，还能处理分析各种特殊字符, 像 `\n` 换行, `\t` 缩进, etc.
 
 {% highlight php %}
 <?php
@@ -198,7 +194,7 @@ echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of mul
                                                                // enables us to use a parsable string
 {% endhighlight %}
 
-Double quotes can contain variables; this is called "interpolation".
+使用双引号可以包含变量;这种操作称之为“插值”.
 
 {% highlight php %}
 <?php
@@ -206,10 +202,9 @@ $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
 {% endhighlight %}
 
-When using interpolation, it is often the case that the variable will be touching another character. This will result
-in some confusion as to what is the name of the variable, and what is a literal character.
+当我们使用插值时,经常会遇到一个变量包含另一个字符串。这样做的结果是将产生一些混乱，无法区分什么是变量名称，什么是文本字符串。
 
-To fix this problem, wrap the variable within a pair of curly brackets.
+为了解决这种问题，我们使用大括号来包裹相对应的变量。
 
 {% highlight php %}
 <?php
@@ -222,7 +217,7 @@ $juice = 'plum';
 echo "I drank some juice made of {$juice}s";    // $juice will be parsed
 
 /**
- * Complex variables will also be parsed within curly brackets
+ * 在大括号内的复杂变量也将被解析
  */
 
 $juice = array('apple', 'orange', 'plum');
@@ -231,7 +226,7 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 
 * [Double quotes](http://php.net/language.types.string#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Nowdoc syntax （Nowdoc 语法）
 
 Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
 use of multi-line strings without the need for concatenating.
@@ -257,7 +252,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Nowdoc syntax](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
 
-#### Heredoc syntax
+#### Heredoc syntax （Heredoc 语法）
 
 Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
 strings without the need for concatenating.
