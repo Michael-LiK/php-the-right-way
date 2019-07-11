@@ -72,13 +72,13 @@ function test($a)
 
 * [If statements](http://php.net/control-structures.if)
 
-### 多重选择语句
+### Switch 多重选择语句
 
-Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
+Switch多重选择语句是一个非常好的方式去避免使用大量的else/if,else,但是使用时也仍需注意以下几点：
 
-- Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
-- Without a 'break', they will continue to implement each case until reaching a break/return
+- Switch 多重选择语句只能进行“值”的比较，不能进行类型的比较。 (相当于'==')
+- 语句将遍历每一种case(情况)，直到找到匹配值位置.如果没有找到匹配值,将会执行默认的设置 (前提是已设置默认值)
+- 进入匹配条件后，如果没有break;(中断退出语句), 将会继续执行匹配，直到找到第一个break;或return;退出。
 - Within a function, using 'return' alleviates the need for 'break' as it ends the function
 
 {% highlight php %}
@@ -306,7 +306,7 @@ optimization unless you really understand the meaning and impact of the differen
 * [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
-## Ternary operators
+## 三元运算符
 
 Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
 stacked/nested, it is advised to use one per line for readability.
