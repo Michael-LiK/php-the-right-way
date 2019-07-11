@@ -228,8 +228,9 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 
 #### Nowdoc syntax （Nowdoc 语法）
 
-Nowdoc 语法被 was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
-use of multi-line strings without the need for concatenating.
+Nowdoc 语法在PHP5.3中被介绍，他的使用方式与单引号相同，唯一区别是它可以
+使用多行字符串而无需进行连接。
+
 
 {% highlight php %}
 <?php
@@ -254,8 +255,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 #### Heredoc syntax （Heredoc 语法）
 
-Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
-strings without the need for concatenating.
+Heredoc 语法 插入行为与双引号相同，也适用于多行字符串，同时不需要进行字符串的连接。
 
 {% highlight php %}
 <?php
@@ -341,12 +341,9 @@ return $a == 3; // Will return true or false if $a == 3
 
 同理适用于以下运算符(===, !==, !=, == etc).
 
-#### Utilising brackets with ternary operators for form and function
+#### 在三元运算符中对表达式和方法使用括号
 
-When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
-within blocks of statements. An example of when there is no requirement to use bracketing is:
-当使用三元运算符时，括号可以帮助提高代码可读性，还包括联合
-在声明的块内。不需要使用括号的示例如下：
+当使用三元运算符时，括号可以帮助提高代码可读性，也可以帮助在块内声明。不需要使用括号的示例如下：
 
 {% highlight php %}
 <?php
