@@ -78,8 +78,8 @@ Switch多重选择语句是一个非常好的方式去避免使用大量的else/
 
 - Switch 多重选择语句只能进行“值”的比较，不能进行类型的比较。 (相当于'==')
 - 语句将遍历每一种case(情况)，直到找到匹配值位置.如果没有找到匹配值,将会执行默认的设置 (前提是已设置默认值)
-- 进入匹配条件后，如果没有break;(中断退出语句), 将会继续执行匹配，直到找到第一个break;或return;退出。
-- Within a function, using 'return' alleviates the need for 'break' as it ends the function
+- 进入匹配条件后，如果没有break;(中断退出语句), 将会继续执行匹配，直到找到第一个break;或return;退出方法。
+- 在一个函数,使用'return'代替了使用'break'的必要性,因为它结束了当前函数。
 
 {% highlight php %}
 <?php
@@ -106,10 +106,9 @@ function test($a)
 * [Switch statements](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
-## Global namespace
+## 全局命名空间
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
-the global function by using a backslash before the function name.
+当我们使用命名空间的时候，你可能想要找到你写过的被隐藏的方法，通过在调用方法前加反斜杠（\），你讲解决这个问题
 
 {% highlight php %}
 <?php
@@ -128,12 +127,12 @@ function array()
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/language.namespaces.global)
-* [Global rules](http://php.net/userlandnaming.rules)
+* [全局空间](http://php.net/language.namespaces.global)
+* [全局规则](http://php.net/userlandnaming.rules)
 
-## Strings
+## 字符串
 
-### Concatenation
+### 连接符
 
 - If your line extends beyond the recommended line length (120 characters), consider concatenating your line
 - For readability it is best to use concatenation operators over concatenating assignment operators
@@ -306,10 +305,9 @@ optimization unless you really understand the meaning and impact of the differen
 * [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
-## 三元运算符
+## 三元运算符 
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+三元运算符是精简代码的好方法,但也往往存在着过度使用.当三元运算符可 堆叠/嵌套时，建议保持每一行的可读性。
 
 {% highlight php %}
 <?php
@@ -317,7 +315,7 @@ $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
 {% endhighlight %}
 
-In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
+相比之下,这里有一个例子，为了缩减代码量而牺牲了所有形式的的代码可读性。
 
 {% highlight php %}
 <?php
