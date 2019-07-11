@@ -228,8 +228,7 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 
 #### Nowdoc syntax （Nowdoc 语法）
 
-Nowdoc 语法在PHP5.3中被介绍，他的使用方式与单引号相同，唯一区别是它可以
-使用多行字符串而无需进行连接。
+Nowdoc 语法在PHP5.3中被介绍，他的使用方式与单引号相同，唯一区别是它可以使用多行字符串而无需进行连接。
 
 
 {% highlight php %}
