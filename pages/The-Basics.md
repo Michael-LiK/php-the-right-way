@@ -132,11 +132,11 @@ function array()
 
 ## 字符串
 
-### 连接符
+### 字符串连接符
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it is best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
+- 如果你想一行记录超过120个字符的，建议你使用字符串连接符。
+- 为了更好地可读性，最好使用字符串连接符而不是赋值运算符。
+- 当变量在原始范围内,使用字符串连接符新起一行时要对代码进行缩进。
 
 
 {% highlight php %}
@@ -154,12 +154,11 @@ $a = 'Multi-line example'      // concatenation operator (.)
 
 * [String Operators](http://php.net/language.operators.string)
 
-### String types
+### 字符串类型
 
-Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
-strings and they offer slightly different syntax, with slightly different behaviors.
+字符串是一系列字符，听起来应该很简单。也就是说，有一些不同类型的字符串，它们提供略有不同的语法，行为略有不同。
 
-#### Single quotes
+#### 单引号
 
 Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
 variables.
@@ -182,7 +181,7 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
 
 * [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
 
-#### Double quotes
+#### 双引号
 
 Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
 of special characters, like `\n` for newline, `\t` for a tab, etc.
@@ -286,7 +285,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
-### Which is quicker?
+### 哪一种更快?
 
 There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
 fundamentally not true.
@@ -307,7 +306,7 @@ optimization unless you really understand the meaning and impact of the differen
 
 ## 三元运算符 
 
-三元运算符是精简代码的好方法,但也往往存在着过度使用.当三元运算符可 堆叠/嵌套时，建议保持每一行的可读性。
+三元运算符是精简代码的好方法，但也往往存在着过度使用.当三元运算符可 堆叠/嵌套时，建议保持每一行的可读性。
 
 {% highlight php %}
 <?php
@@ -315,14 +314,14 @@ $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
 {% endhighlight %}
 
-相比之下,这里有一个例子，为了缩减代码量而牺牲了所有形式的的代码可读性。
+相比之下，这里有一个例子，为了缩减代码量而牺牲了所有形式的的代码可读性。
 
 {% highlight php %}
 <?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
-To 'return' a value with ternary operators use the correct syntax.
+使用三元运算符的正确语法，来获得返回值。
 
 {% highlight php %}
 <?php
@@ -336,8 +335,7 @@ return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 
 {% endhighlight %}
 
-It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+有一点需要被提醒，你不需要使用三元运算符来进行布尔值的判断和返回。例子如下：
 
 {% highlight php %}
 <?php
@@ -351,7 +349,7 @@ return $a == 3; // Will return true or false if $a == 3
 
 {% endhighlight %}
 
-This can also be said for all operations(===, !==, !=, == etc).
+同理适用于以下运算符(===, !==, !=, == etc).
 
 #### Utilising brackets with ternary operators for form and function
 
