@@ -162,7 +162,7 @@ $a = 'Multi-line example'      // concatenation operator (.)
 
 单引号常常被用来表示“文字字符串”，而文字字符串不会解析变量和特殊符号。
 
-如果你使用单引号，你可能像这样在一个字符串中输入一个变量名: `'some $thing'`, 你将会看到这样的输出`some $thing`. 如果你使用双引号, 他将会尝试解析 `$thing`这个变量名，如果变量没有找到将会报错.
+如果你使用单引号，你可能像这样在一个字符串中输入一个变量名: `'some $thing'`, 你将会看到这样的输出`some $thing`. 如果你使用双引号, 他将会尝试解析 `$thing`这个变量名，如果变量没有找到将会报错。
 
 
 {% highlight php %}
@@ -228,7 +228,7 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 
 #### Nowdoc syntax （Nowdoc 语法）
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
+Nowdoc 语法被 was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
 use of multi-line strings without the need for concatenating.
 
 {% highlight php %}
@@ -282,15 +282,12 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 ### 哪一种更快?
 
-There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
-fundamentally not true.
+这里有一种传言就是单引号会比双引号在使用上稍快一些，实际上这并不是真是的。
 
-If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
-or double quoted string will be entirely identical. Neither are quicker.
+如果你定义了一个简单字符串，没有使用任何复杂变量和特殊字符串，使用单引号和双引号的效果是相同的，两者并不会谁更快。
 
-If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
-results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
-values, interpolating is minutely faster.
+
+如果要连接任意类型的多个字符串，或在双引号字符串中进行插值，则结果可能会有所不同。如果您使用的是少量的值，那么进行连接速度会稍微快一点。对于大量的值，进行插值操作速度要快得多。
 
 Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
 application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
@@ -301,7 +298,7 @@ optimization unless you really understand the meaning and impact of the differen
 
 ## 三元运算符 
 
-三元运算符是精简代码的好方法，但也往往存在着过度使用.当三元运算符可 堆叠/嵌套时，建议保持每一行的可读性。
+三元运算符是精简代码的好方法，但也往往存在着过度使用.当三元运算符可堆叠/嵌套时，建议保持每一行的可读性。
 
 {% highlight php %}
 <?php
