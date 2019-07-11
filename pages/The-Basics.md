@@ -369,8 +369,7 @@ Another example is the snippet below which will return true if ($a != 3 AND $b !
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
-Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
-Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
+从PHP5.3开始，可以省略三元运算符的中间部分。如果expr1的计算结果为TRUE，则表达式“expr1？：expr3”将返回expr1，否则返回expr3。
 
 * [三元运算符](http://php.net/language.operators.comparison)
 
