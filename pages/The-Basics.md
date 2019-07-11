@@ -281,7 +281,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 ### 哪一种更快?
 
-这里有一种传言就是单引号会比双引号在使用上稍快一些，实际上这并不是真是的。
+这里有一种谣言就是单引号会比双引号在使用上稍快一些，实际上这并不是真是的。
 
 如果你定义了一个简单字符串，没有使用任何复杂变量和特殊字符串，使用单引号和双引号的效果是相同的，两者并不会谁更快。
 
@@ -290,7 +290,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 无论你使用字符串做什么，这些类型都不会对你的应用产生任何明显的影响。尝试重写代码以使用其他方式是徒劳，所以请避免过度优化，除非您真正了解差异的含义和影响。
 
-* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+* [驳斥单引号的性能谣言](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
 ## 三元运算符 
@@ -387,4 +387,4 @@ echo $about;
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
+* [性能提示](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
