@@ -38,7 +38,7 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 
 ### If 条件判断语句
 
-当我们在函数或类方法中使用 'if/else' 条件判断语句时，存在一个常见的误解,'else'语句是必须使用的,以此保证其他的执行情况有明确的定义。然而，如果我们的输出结果是去定义返回值，那么else语句就不是必须的，我们可以直接通过return进行返回，使用多余的else语句将变得没有意义。
+当我们在函数或类方法中使用 'if/else' 条件判断语句时，存在一个常见的误解,'else'语句是必须使用的,以此保证其他的执行情况有明确的定义。然而，如果我们的输出结果是去定义返回值，那么'else'语句就不是必要的，我们可以直接通过return进行返回，使用多余的else语句将变得毫无意义。
 
 {% highlight php %}
 <?php
@@ -70,13 +70,13 @@ function test($a)
 
 {% endhighlight %}
 
-* [If statements](http://php.net/control-structures.if)
+* [If 语句](http://php.net/control-structures.if)
 
 ### Switch 多重选择语句
 
-Switch多重选择语句是一个非常好的方式去避免使用大量的else/if,else,但是使用时也仍需注意以下几点：
+Switch多重选择语句是一个非常好的方式去避免使用大量的'else/if','else',但是使用时也仍需注意以下几点：
 
-- Switch 多重选择语句只能进行“值”的比较，不能进行类型的比较。 (相当于'==')
+- Switch 多重选择语句只能进行“值”的比较，不能进行“类型”的比较。 (相当于'==')
 - 语句将遍历每一种case(情况)，直到找到匹配值位置.如果没有找到匹配值,将会执行默认的设置 (前提是已设置默认值)
 - 进入匹配条件后，如果没有break;(中断退出语句), 将会继续执行匹配，直到找到第一个break;或return;退出方法。
 - 在一个函数,使用'return'代替了使用'break'的必要性,因为它结束了当前函数。
