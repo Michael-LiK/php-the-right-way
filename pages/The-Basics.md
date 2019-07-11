@@ -103,12 +103,12 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/control-structures.switch)
+* [多重选择语句](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
 ## 全局命名空间
 
-当我们使用命名空间的时候，你可能想要找到你写过的被隐藏的方法，通过在调用方法前加反斜杠（\），你讲解决这个问题
+当我们使用命名空间的时候，你可能想要找到你写过的被隐藏的方法，通过在调用方法前加反斜杠，你将解决这个问题。
 
 {% highlight php %}
 <?php
