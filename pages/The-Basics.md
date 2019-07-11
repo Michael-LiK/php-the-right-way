@@ -376,11 +376,9 @@ Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 
 
 * [Ternary operators](http://php.net/language.operators.comparison)
 
-## Variable declarations
+## 变量声明
 
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let us say an example
-string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
+有时, 程序员们尝试让他们的代码看起来更整洁，通过不同的名称声明一个预定义变量。但是这也将消耗两倍的内存。对于下面这个例子,我们书写一个字符串将包含1MB的数据量,通过拷贝变量，当你在执行脚本的时候内存的消耗将增加到2MB。
 
 {% highlight php %}
 <?php
